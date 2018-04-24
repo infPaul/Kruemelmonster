@@ -58,23 +58,20 @@ public class Spiel
             keksEinfuegen(x,y,30);
             /*for(int m=0;m<kekse.size();m++)
             {
-                Keks k = kekse.get(m);
-                int x1=k.getX();
-                int y1=k.getY();
+            Keks k = kekse.get(m);
+            int x1=k.getX();
+            int y1=k.getY();
 
-                if (30*30<=((x1-x)*(x1-x)+(y1-y)*(y-y1)))
-                {
+            if (30*30<=((x1-x)*(x1-x)+(y1-y)*(y-y1)))
+            {
 
-                    keksEinfuegen(x,y,30);
+            keksEinfuegen(x,y,30);
 
-                    
-                }
-                else
-                {
-                    //i--;
-                }*/
             }
-
+            else
+            {
+            //i--;
+            }*/
         }
 
     }
