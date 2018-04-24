@@ -11,6 +11,7 @@ public class Spiel
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private ArrayList<Verbindung> verbindungen;
     private ArrayList<Keks> kekse;
+    private ArrayList<Kruemel> kruemels;
     private Zeichenflaeche flaeche;
     /**
      * Konstruktor für Objekte der Klasse Spiel
@@ -35,6 +36,13 @@ public class Spiel
         Keks keks=new Keks(x,y,radius);
         kekse.add(keks);
         flaeche.hinzufuegen(keks.getKreis());
+    }
+    
+    public void kruemelEinfuegen(int x,int y)
+    {
+        Kruemel kruemel=new Kruemel(x,y);
+        kruemels.add(kruemel);
+        flaeche.hinzufuegen(kruemel.getKreis());
     }
 
     public void verbindungEinfuegen(int ax,int ay,int ex,int ey)
@@ -73,7 +81,8 @@ public class Spiel
             //i--;
             }*/
         }
-
+        
+        kruemelEinfuegen(10,10);
     }
 
     public void Verbindungen()

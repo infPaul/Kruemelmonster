@@ -21,7 +21,6 @@ public class Kruemel
         this.x =x;
         this.y =y;
         radius=4;
-        durchmesser=radius*2;
 
         // Original Kekse hier:
         kreis=new Circle(x,y,radius);
