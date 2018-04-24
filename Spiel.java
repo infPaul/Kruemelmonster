@@ -21,8 +21,8 @@ public class Spiel
         flaeche=new Zeichenflaeche();
         kekse = new ArrayList<Keks>();
         verbindungen=new ArrayList<Verbindung>();
-        spielErstellen();
-        Verbindungen();
+        //spielErstellen();
+        //Verbindungen();
     }
 
     public Zeichenflaeche getFlaeche()
@@ -77,7 +77,7 @@ public class Spiel
 
         }
 
-    }
+    
 
     public void Verbindungen()
     {
