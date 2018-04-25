@@ -6,7 +6,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 
-public class Controller{
+public class Controller
+{
     
 
      private Spiel spiel; 
@@ -44,7 +45,8 @@ public class Controller{
     @FXML
     void initialize() {
           spiel = new Spiel();
-    Bildschirm.getChildren().add(spiel.getFlaeche());
+   Bildschirm.getChildren().add(spiel.getFlaeche());
+    
     spiel.spielErstellen();
     spiel.Verbindungen();
     }

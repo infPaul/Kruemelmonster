@@ -10,11 +10,11 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: DodgerBlue;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: DodgerBlue;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
       <ImageView fitHeight="440.0" fitWidth="932.0" layoutX="174.0" layoutY="-67.0">
          <image>
-            <Image url="@../Downloads/Unbenan333nt.jpg" />
+            <Image url="@Unbenan333nt.jpg" />
          </image>
       </ImageView>
     <Button fx:id="start" layoutX="1014.0" layoutY="692.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="129.0" text="Start">
@@ -22,7 +22,7 @@
             <Font name="Bookman Old Style" size="30.0" />
          </font>
       </Button>
-      <Pane fx:id="Bildschirm" layoutX="91.0" layoutY="170.0" prefHeight="543.0" prefWidth="686.0" style="-fx-background-color: Gray;" visible="false" />
+      <Pane fx:id="Bildschirm" layoutX="91.0" layoutY="170.0" prefHeight="543.0" prefWidth="686.0" style="-fx-background-color: Gray;" />
       <TabPane layoutX="883.0" layoutY="215.0" />
       <TextFlow layoutX="808.0" layoutY="222.0" />
       <TextField fx:id="score" layoutX="880.0" layoutY="230.0" prefHeight="62.0" prefWidth="176.0" />
@@ -39,12 +39,12 @@
       </Text>
       <ImageView fitHeight="200.0" fitWidth="149.0" layoutX="785.0" layoutY="600.0">
          <image>
-            <Image url="@../Downloads/krumelmonster-aus-dem-backofen-L-G96Qp_.jpg" />
+            <Image url="@krumelmonster-aus-dem-backofen-L-G96Qp_.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="132.0" fitWidth="200.0" layoutX="914.0" layoutY="21.0">
          <image>
-            <Image url="@../Downloads/Keks-201100285851.jpg" />
+            <Image url="@Kekszzz-201100285851.jpg" />
          </image>
       </ImageView>
       <Button fx:id="statistik" layoutX="28.0" layoutY="742.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" text="Statistik">
@@ -60,7 +60,7 @@
       </Text>
       <ImageView fitHeight="132.0" fitWidth="200.0" layoutX="62.0" layoutY="21.0">
          <image>
-            <Image url="@../Downloads/Kekszzz-201100285851.jpg" />
+            <Image url="@Keks-201100285851.jpg" />
          </image>
       </ImageView>
    </children>
