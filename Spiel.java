@@ -46,38 +46,19 @@ public class Spiel
 
     public void spielErstellen()
     {
-        Random rand=new Random();
-        int maxX=650;
-        int minX=50;
-        int maxY=450;
-        int minY=50;
-        for(int i=0;i<10;i++)
-        {
-            int x=rand.nextInt((maxX-minX)+1)+minX;
-            int y=rand.nextInt((maxY-minY)+1)+minY;
-            keksEinfuegen(x,y,30);
-            /*for(int m=0;m<kekse.size();m++)
-            {
-                Keks k = kekse.get(m);
-                int x1=k.getX();
-                int y1=k.getY();
-
-                if (30*30<=((x1-x)*(x1-x)+(y1-y)*(y-y1)))
-                {
-
-                    keksEinfuegen(x,y,30);
-
-                    
-                }
-                else
-                {
-                    //i--;
-                }*/
-            }
-
-        }
-
+        keksEinfuegen(40,40,30);
+        keksEinfuegen(80,150,30);
+        keksEinfuegen(250,120,30);
+        keksEinfuegen(170,300,30);
+        keksEinfuegen(350,250,30);
+        keksEinfuegen(300,380,30);
+        keksEinfuegen(390,150,30);
+        keksEinfuegen(470,300,30);
+        keksEinfuegen(550,170,30);
+        keksEinfuegen(600,450,30);
+        
     }
+    
 
     public void Verbindungen()
     {
