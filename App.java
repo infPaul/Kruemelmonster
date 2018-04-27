@@ -8,14 +8,14 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 /**
  * Beschreiben Sie hier die Klasse App.
- * 
- * @author (Ihr Name) 
+ *
+ * @author (Ihr Name)
  * @version (eine Versionsnummer oder ein Datum)
  */
 public class App extends Application
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private Spiel spiel; 
+    private Spiel spiel;
 
     /**
      * Konstruktor für Objekte der Klasse App
@@ -23,7 +23,7 @@ public class App extends Application
     public App()
     {
         // Instanzvariable initialisieren
-        
+
     }
 
     private void init(Stage primaryStage) {
@@ -32,14 +32,14 @@ public class App extends Application
         primaryStage.setScene(new Scene(root));
         // Simple red filled circle
        spiel = new Spiel();
-       
-        
+
+
         // Create a group to show all the circles);
         root.getChildren().add(spiel.getFlaeche());
     }
- 
-   
- 
+
+
+
     @Override public void start(Stage primaryStage) throws Exception {
         init(primaryStage);
         primaryStage.show();

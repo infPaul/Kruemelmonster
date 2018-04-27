@@ -13,15 +13,14 @@ public class Spiel
     private ArrayList<Keks> kekse;
     private ArrayList<Kruemel> kruemels;
     private Zeichenflaeche flaeche;
-    /**
-     * Konstruktor für Objekte der Klasse Spiel
-     */
+    
     public Spiel()
     {
         // Instanzvariable initialisieren
-        flaeche=new Zeichenflaeche();
+        flaeche = new Zeichenflaeche();
         kekse = new ArrayList<Keks>();
-        verbindungen=new ArrayList<Verbindung>();
+        kruemels = new ArrayList<Kruemel>();
+        verbindungen = new ArrayList<Verbindung>();
         spielErstellen();
         Verbindungen();
     }

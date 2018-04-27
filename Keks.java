@@ -7,12 +7,6 @@ import javafx.scene.image.*;
 import javafx.scene.paint.ImagePattern;
 import javax.swing.BorderFactory;
 
-/**
- * Beschreiben Sie hier die Klasse Keks.
- * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
- */
 public class Keks 
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
@@ -33,7 +27,6 @@ public class Keks
         this.x =x;
         this.y =y;
         this.radius=radius;
-        durchmesser=radius*2;
 
         // Keks als Bild:
         Image keks = new Image("cookie.png");
