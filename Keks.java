@@ -18,9 +18,9 @@ public class Keks
     private int reichweite;
     private Circle kreis;
     private Verbindung verb;
-    /**
-     * Konstruktor für Objekte der Klasse Keks
-     */
+    private int maxKruemel;
+    private int gespawnteKruemel;
+
     public Keks(int x,int y,int radius)
     {
         reichweite=200;
@@ -44,13 +44,12 @@ public class Keks
         );
     }
 
-    
     public Circle getKreis()
     {
         return kreis;
     }
     //public boolean 
-     public boolean siehtOrt(int x,int y)
+    public boolean siehtOrt(int x,int y)
     {
         if(reichweite*reichweite<=((x-this.x)*(x-this.x)+(y-this.y)*(y-this.y)))
         {
@@ -59,12 +58,25 @@ public class Keks
         else
             return true;
     }
+
     public int getX()
     {
         return x;
     }
+
     public int getY()
     {
         return y;
     }
+
+    public boolean checkKruemelAnzahl()
+    {
+        if (maxKruemel >= gespawnteKruemel)
+        {
+            return false;
+        }
+        else
+            return true;
+    }
+
 }

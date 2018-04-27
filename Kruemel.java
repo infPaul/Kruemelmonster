@@ -15,6 +15,7 @@ public class Kruemel
     private int durchmesser;
     private String farbe;
     private Circle kreis;
+    private Keks heimatKeks;
 
     public Kruemel(int x,int y)
     {
@@ -35,6 +36,11 @@ public class Kruemel
         );
     }
 
+    public void setHeimatkeks(Keks k)
+    {
+        heimatKeks = k;
+    }
+    
     public Circle getKreis()
     {
         return kreis;

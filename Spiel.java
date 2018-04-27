@@ -1,11 +1,6 @@
 import java.util.*;
 import javafx.scene.input.MouseEvent;
-/**
- * Beschreiben Sie hier die Klasse Spiel.
- * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
- */
+
 public class Spiel
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
@@ -84,6 +79,11 @@ public class Spiel
         kruemelEinfuegen(10,10);
     }
 
+    public void update()
+    {
+        
+    }
+    
     public void Verbindungen()
     {
         int ex;
@@ -107,6 +107,14 @@ public class Spiel
                     }
                 }
             }
+        }
+    }
+    
+    public void kruemelSpawn()
+    {
+        if (Heimatkeks.checkKruemelAnzahl == true)
+        {
+            
         }
     }
 }
