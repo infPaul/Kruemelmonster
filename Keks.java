@@ -27,21 +27,21 @@ public class Keks
     /**
      * Konstruktor für Objekte der Klasse Keks
      */
-    public Keks(int x,int y,int radius)
+    public Keks(int x,int y,int radius,Color farbe)
     {
         reichweite=200;
         this.x =x;
         this.y =y;
         this.radius=radius;
         durchmesser=radius*2;
-
+        
         // Keks als Bild:
         Image keks = new Image("cookie.png");
 
         // Original Kekse hier:
         kreis=new Circle(x,y,radius);
         kreis.setFill(new ImagePattern(keks));
-        kreis.setStroke(Color.RED);
+        kreis.setStroke(farbe); 
         kreis.setStrokeWidth(11);
         kreis.setOnMouseClicked(e -> 
             {
@@ -74,4 +74,6 @@ public class Keks
     {
         return y;
     }
+    
+    
 }

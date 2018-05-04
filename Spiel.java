@@ -1,5 +1,6 @@
 import java.util.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 /**
  * Beschreiben Sie hier die Klasse Spiel.
  * 
@@ -30,9 +31,9 @@ public class Spiel
         return flaeche;
     }
 
-    public void keksEinfuegen(int x,int y,int radius)
+    public void keksEinfuegen(int x,int y,int radius,Color farbe)
     {
-        Keks keks=new Keks(x,y,radius);
+        Keks keks=new Keks(x,y,radius,farbe);
         kekse.add(keks);
         flaeche.hinzufuegen(keks.getKreis());
     }
@@ -46,16 +47,16 @@ public class Spiel
 
     public void spielErstellen()
     {
-        keksEinfuegen(40,40,30);
-        keksEinfuegen(80,150,30);
-        keksEinfuegen(250,120,30);
-        keksEinfuegen(170,300,30);
-        keksEinfuegen(350,250,30);
-        keksEinfuegen(300,380,30);
-        keksEinfuegen(390,150,30);
-        keksEinfuegen(470,300,30);
-        keksEinfuegen(550,170,30);
-        keksEinfuegen(600,450,30);
+        keksEinfuegen(40,40,30,Color.RED);
+        keksEinfuegen(80,150,30,Color.GREY);
+        keksEinfuegen(250,120,30,Color.GREY);
+        keksEinfuegen(170,300,30,Color.GREY);
+        keksEinfuegen(350,250,30,Color.GREY);
+        keksEinfuegen(300,380,30,Color.GREY);
+        keksEinfuegen(390,150,30,Color.GREY);
+        keksEinfuegen(470,300,30,Color.GREY);
+        keksEinfuegen(550,170,30,Color.GREY);
+        keksEinfuegen(600,450,30,Color.BLUE);
         
     }
     
