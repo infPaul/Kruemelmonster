@@ -1,20 +1,20 @@
 import java.util.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.shape.Circle;
 
 public class Spiel
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private ArrayList<Verbindung> verbindungen;
     private ArrayList<Keks> kekse;
-    private ArrayList<Kruemel> kruemels;
     private Zeichenflaeche flaeche;
-    
+    private Circle kreis;
+
     public Spiel()
     {
         // Instanzvariable initialisieren
         flaeche = new Zeichenflaeche();
         kekse = new ArrayList<Keks>();
-        kruemels = new ArrayList<Kruemel>();
         verbindungen = new ArrayList<Verbindung>();
         spielErstellen();
         Verbindungen();
@@ -31,14 +31,12 @@ public class Spiel
         kekse.add(keks);
         flaeche.hinzufuegen(keks.getKreis());
     }
-    
-    public void kruemelEinfuegen(int x,int y)
-    {
-        Kruemel kruemel=new Kruemel(x,y);
-        kruemels.add(kruemel);
-        flaeche.hinzufuegen(kruemel.getKreis());
-    }
 
+    public void flaecheHinzufuegen(Circle k)
+    {
+        flaeche.hinzufuegen(k);
+    }
+    
     public void verbindungEinfuegen(int ax,int ay,int ex,int ey)
     {
         Verbindung v=new Verbindung(ax,ay,ex,ey);
@@ -58,6 +56,7 @@ public class Spiel
             int x=rand.nextInt((maxX-minX)+1)+minX;
             int y=rand.nextInt((maxY-minY)+1)+minY;
             keksEinfuegen(x,y,30);
+           
             /*for(int m=0;m<kekse.size();m++)
             {
             Keks k = kekse.get(m);
@@ -75,15 +74,13 @@ public class Spiel
             //i--;
             }*/
         }
-        
-        kruemelEinfuegen(10,10);
     }
 
     public void update()
     {
-        
+
     }
-    
+
     public void Verbindungen()
     {
         int ex;
@@ -109,12 +106,5 @@ public class Spiel
             }
         }
     }
-    
-    public void kruemelSpawn()
-    {
-        if (Heimatkeks.checkKruemelAnzahl == true)
-        {
-            
-        }
-    }
+
 }

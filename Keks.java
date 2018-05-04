@@ -6,6 +6,8 @@ import javafx.scene.shape.Circle;
 import javafx.scene.image.*;
 import javafx.scene.paint.ImagePattern;
 import javax.swing.BorderFactory;
+import java.util.*;
+import javafx.scene.input.MouseEvent;
 
 public class Keks 
 {
@@ -20,6 +22,7 @@ public class Keks
     private Verbindung verb;
     private int maxKruemel;
     private int gespawnteKruemel;
+    private ArrayList<Kruemel> kruemels;
 
     public Keks(int x,int y,int radius)
     {
@@ -27,6 +30,8 @@ public class Keks
         this.x =x;
         this.y =y;
         this.radius=radius;
+        maxKruemel=radius/2;
+        kruemels = new ArrayList<Kruemel>();
 
         // Keks als Bild:
         Image keks = new Image("cookie.png");
@@ -69,14 +74,16 @@ public class Keks
         return y;
     }
 
-    public boolean checkKruemelAnzahl()
+    public Kruemel spawnKruemel()
     {
         if (maxKruemel >= gespawnteKruemel)
         {
-            return false;
+            Kruemel kruemel=new Kruemel(x,y,this);
+            kruemels.add(kruemel);
+            return kruemel;
         }
         else
-            return true;
+            return null;
     }
 
 }

@@ -17,10 +17,11 @@ public class Kruemel
     private Circle kreis;
     private Keks heimatKeks;
 
-    public Kruemel(int x,int y)
+    public Kruemel(int x,int y,Keks hk)
     {
-        this.x =x;
-        this.y =y;
+        this.x = x;
+        this.y = y;
+        hk = heimatKeks;
         radius=4;
 
         // Original Kekse hier:
@@ -55,4 +56,5 @@ public class Kruemel
     {
         return y;
     }
+            
 }
