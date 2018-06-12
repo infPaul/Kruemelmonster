@@ -22,6 +22,7 @@ public class Keks
     private Verbindung verb;
     private int maxKruemel;
     private int gespawnteKruemel;
+    private int besitzendeKruemel;
     private ArrayList<Kruemel> kruemels;
 
     public Keks(int x,int y,int radius)
@@ -32,6 +33,8 @@ public class Keks
         this.radius=radius;
         maxKruemel=radius/2;
         kruemels = new ArrayList<Kruemel>();
+        gespawnteKruemel = 0;
+        besitzendeKruemel = 0;
 
         // Keks als Bild:
         Image keks = new Image("cookie.png");
@@ -74,16 +77,33 @@ public class Keks
         return y;
     }
 
+    public void kruemelZerstoert()
+    {
+        gespawnteKruemel--;
+    }
+
     public Kruemel spawnKruemel()
     {
-        if (maxKruemel >= gespawnteKruemel)
+        if (maxKruemel > gespawnteKruemel)
         {
             Kruemel kruemel=new Kruemel(x,y,this);
             kruemels.add(kruemel);
+            gespawnteKruemel++;
+            besitzendeKruemel++;
             return kruemel;
         }
         else
             return null;
     }
 
+    public Kruemel sendeKruemel()
+    {
+
+    }
+
+    public void empfangeKruemel(Kruemel k)
+    {
+        kruemels.add(k);
+        besitzendeKruemel++;
+    }
 }

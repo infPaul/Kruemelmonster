@@ -16,12 +16,14 @@ public class Kruemel
     private String farbe;
     private Circle kreis;
     private Keks heimatKeks;
+    private Keks besitzenderKeks;
 
     public Kruemel(int x,int y,Keks hk)
     {
         this.x = x;
         this.y = y;
-        hk = heimatKeks;
+        heimatKeks = hk;
+        besitzenderKeks = heimatKeks;
         radius=4;
 
         // Original Kekse hier:
@@ -42,6 +44,11 @@ public class Kruemel
         heimatKeks = k;
     }
     
+    public void setBesitzkeks(Keks k)
+    {
+        besitzenderKeks = k;
+    }
+    
     public Circle getKreis()
     {
         return kreis;
@@ -56,5 +63,9 @@ public class Kruemel
     {
         return y;
     }
-            
+    
+    public void bewegenNach(int xNeu, int yNeu)
+    {
+        
+    }
 }

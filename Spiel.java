@@ -36,7 +36,7 @@ public class Spiel
     {
         flaeche.hinzufuegen(k);
     }
-    
+
     public void verbindungEinfuegen(int ax,int ay,int ex,int ey)
     {
         Verbindung v=new Verbindung(ax,ay,ex,ey);
@@ -56,7 +56,7 @@ public class Spiel
             int x=rand.nextInt((maxX-minX)+1)+minX;
             int y=rand.nextInt((maxY-minY)+1)+minY;
             keksEinfuegen(x,y,30);
-           
+
             /*for(int m=0;m<kekse.size();m++)
             {
             Keks k = kekse.get(m);
@@ -78,7 +78,11 @@ public class Spiel
 
     public void update()
     {
-
+        for(int i=0;i<kekse.size();i++)
+        {
+            Keks k = kekse.get(i);
+            k.spawnKruemel();
+        }
     }
 
     public void Verbindungen()
@@ -107,4 +111,11 @@ public class Spiel
         }
     }
 
+    public void sendeKruemel(int anzahl, Kruemel k1, Kruemel k2) // von k1 nach k2
+    {
+        for(int i=0; i<anzahl; i++)
+        {
+            k1.sendeKruemel();
+        }
+    }
 }
