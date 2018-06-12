@@ -5,7 +5,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
-
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.KeyCode;
+import javafx.event.ActionEvent;
 public class Controller
 {
     
@@ -19,7 +21,7 @@ public class Controller
     private URL location;
 
     @FXML
-    private Button start;
+   private Button lauft;
 
     @FXML
     private Pane Bildschirm;
@@ -35,7 +37,7 @@ public class Controller
 
     @FXML
     private TextField erobert;
-
+ private String zustand;
     
     public Controller()
     {
@@ -49,5 +51,47 @@ public class Controller
     
     spiel.spielErstellen();
     spiel.Verbindungen();
+   zustand = "Pause";
+
     }
-}
+     public void start() {
+
+       
+        spiel.start();
+
+    }
+
+    public void stop()
+    {
+        spiel.stop();
+    }
+
+    public void update()
+    {
+        spiel.update();
+    }
+    @FXML
+    void lauft(ActionEvent event)
+    {
+        
+            if (zustand == "Laufend")
+            {
+                zustand = "Pause";
+                stop();
+                     System.out.println("PAUSE");
+            }
+            else {
+                zustand = "Laufend";
+                start();
+                  System.out.println("LÄUFT");
+            }
+        
+
+       
+    }
+
+
+
+
+     
+    }

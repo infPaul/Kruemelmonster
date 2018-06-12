@@ -23,7 +23,7 @@ public class Spiel
         flaeche=new Zeichenflaeche();
         kekse = new ArrayList<Keks>();
         verbindungen=new ArrayList<Verbindung>();
-         
+       timer = new Timer(this);  
 
         //spielErstellen();
         //Verbindungen();
