@@ -13,6 +13,7 @@ public class Spiel
     private ArrayList<Verbindung> verbindungen;
     private ArrayList<Keks> kekse;
     private Zeichenflaeche flaeche;
+    private Timer timer;
     /**
      * Konstruktor für Objekte der Klasse Spiel
      */
@@ -22,6 +23,8 @@ public class Spiel
         flaeche=new Zeichenflaeche();
         kekse = new ArrayList<Keks>();
         verbindungen=new ArrayList<Verbindung>();
+         
+
         //spielErstellen();
         //Verbindungen();
     }
@@ -89,4 +92,22 @@ public class Spiel
             }
         }
     }
+    
+    public void start() {    
+        timer.start();
+    }
+
+    public void stop()
+    {
+        timer.stop();
+    }
+
+    // Diese Methode wird vom Timer immer wieder aufgerufen
+    public void update()
+    {           
+        
+        
+      
+    }
+
 }
