@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Spiel
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Spiel.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=Spiel()
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Spiel\r\n
+comment2.params=
+comment2.target=Zeichenflaeche\ getFlaeche()
+comment3.params=x\ y\ radius\ farbe
+comment3.target=void\ keksEinfuegen(int,\ int,\ int,\ javafx.scene.paint.Color)
+comment4.params=ax\ ay\ ex\ ey
+comment4.target=void\ verbindungEinfuegen(int,\ int,\ int,\ int)
+comment5.params=
+comment5.target=void\ spielErstellen()
+comment6.params=
+comment6.target=void\ Verbindungen()
+comment7.params=k1\ k2
+comment7.target=boolean\ verbindungPruefen(Keks,\ Keks)
+numComments=8
