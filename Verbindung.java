@@ -25,7 +25,8 @@ public class Verbindung
         endeX=ex;
         endeY=ey;
         line=new Line(ax,ay,ex,ey);
-        line.setFill(Color.BLACK);  
+        line.setFill(Color.BLACK); 
+        
     }
     public Line getLine()
     {
