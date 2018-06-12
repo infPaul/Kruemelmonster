@@ -26,7 +26,7 @@ public class App extends Application
 @Override
     public void start(Stage primaryStage) throws Exception {
         // Darstellung als fxml-Datei
-              
+              //Spieloberfläche einfuegen
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Spieloberflaeche.fxml"));
         Parent root = loader.load();
 
