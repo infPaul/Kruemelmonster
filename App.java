@@ -1,3 +1,5 @@
+
+
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -36,7 +38,7 @@ public class App extends Application
         
        
         primaryStage.setScene(scene);
-        primaryStage.setTitle("KrÃ¼melmonster");
+        primaryStage.setTitle("Krümelmonster");
         primaryStage.show();
     }
    /* private void init(Stage primaryStage) {

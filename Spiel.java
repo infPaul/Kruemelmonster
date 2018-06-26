@@ -1,3 +1,4 @@
+
 import java.util.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
@@ -23,7 +24,7 @@ public class Spiel
         flaeche=new Zeichenflaeche();
         kekse = new ArrayList<Keks>();
         verbindungen=new ArrayList<Verbindung>();
-         
+       timer = new Timer(this);  
 
         //spielErstellen();
         //Verbindungen();
@@ -110,4 +111,17 @@ public class Spiel
       
     }
 
+    public boolean verbindungPruefen(Keks k1, Keks k2)
+   {
+       int x=k2.getX();
+       int y=k2.getY();
+       if(k1.siehtOrt(x,y))
+       {
+           return true;
+        }
+        else
+        {
+            return false;
+        }
+   }
 }
