@@ -24,6 +24,7 @@ public class Keks
     private int gespawnteKruemel;
     private int besitzendeKruemel;
     private ArrayList<Kruemel> kruemels;
+    private Kruemel temporaerKruemel;
 
     public Keks(int x,int y,int radius)
     {
@@ -98,9 +99,20 @@ public class Keks
 
     public Kruemel sendeKruemel()
     {
-
+        if (besitzendeKruemel>0)
+        {
+            besitzendeKruemel--;
+            temporaerKruemel = kruemels.get(0);
+            kruemels.remove(0);
+            
+            return temporaerKruemel;
+        }
+        else
+        {
+            return null;
+        }
     }
-
+    
     public void empfangeKruemel(Kruemel k)
     {
         kruemels.add(k);

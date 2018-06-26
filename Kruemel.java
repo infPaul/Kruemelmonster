@@ -66,6 +66,7 @@ public class Kruemel
     
     public void bewegenNach(int xNeu, int yNeu)
     {
-        
+        x = xNeu;
+        y = yNeu;
     }
 }

@@ -111,11 +111,11 @@ public class Spiel
         }
     }
 
-    public void sendeKruemel(int anzahl, Kruemel k1, Kruemel k2) // von k1 nach k2
+    public void sendeKruemel(int anzahl, Keks k1, Keks k2) // von k1 nach k2
     {
         for(int i=0; i<anzahl; i++)
         {
-            k1.sendeKruemel();
+            k2.empfangeKruemel(k1.sendeKruemel());
         }
     }
 }
