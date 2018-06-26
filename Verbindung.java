@@ -1,3 +1,5 @@
+
+
 import javafx.scene.shape.Line;
 import javafx.scene.paint.Color;
 /**
@@ -25,8 +27,7 @@ public class Verbindung
         endeX=ex;
         endeY=ey;
         line=new Line(ax,ay,ex,ey);
-        line.setFill(Color.BLACK); 
-        
+        line.setFill(Color.BLACK);  
     }
     public Line getLine()
     {

@@ -1,3 +1,5 @@
+
+
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -26,7 +28,7 @@ public class App extends Application
 @Override
     public void start(Stage primaryStage) throws Exception {
         // Darstellung als fxml-Datei
-              
+              //Spieloberfläche einfuegen
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Spieloberflaeche.fxml"));
         Parent root = loader.load();
 
@@ -36,7 +38,7 @@ public class App extends Application
         
        
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Krümelmonster");
+        primaryStage.setTitle("Kr�melmonster");
         primaryStage.show();
     }
    /* private void init(Stage primaryStage) {

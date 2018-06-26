@@ -1,3 +1,4 @@
+
 import java.util.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
@@ -13,6 +14,7 @@ public class Spiel
     private ArrayList<Verbindung> verbindungen;
     private ArrayList<Keks> kekse;
     private Zeichenflaeche flaeche;
+    private Timer timer;
     /**
      * Konstruktor für Objekte der Klasse Spiel
      */
@@ -22,6 +24,8 @@ public class Spiel
         flaeche=new Zeichenflaeche();
         kekse = new ArrayList<Keks>();
         verbindungen=new ArrayList<Verbindung>();
+       timer = new Timer(this);  
+
         //spielErstellen();
         //Verbindungen();
     }
@@ -47,7 +51,7 @@ public class Spiel
 
     public void spielErstellen()
     {
-        
+ 
         keksEinfuegen(40,40,30,Color.RED);
         keksEinfuegen(80,150,30,Color.GREY);
         keksEinfuegen(250,120,30,Color.GREY);
@@ -89,17 +93,35 @@ public class Spiel
             }
         }
     }
-    public boolean verbindungPruefen(Keks k1,Keks k2)
+    
+    public void start() {    
+        timer.start();
+    }
+
+    public void stop()
     {
-        int x=k2.getX();
-        int y=k2.getY();
-        if(k1.siehtOrt(x,y))
-        {
-            return true;
+        timer.stop();
+    }
+
+    // Diese Methode wird vom Timer immer wieder aufgerufen
+    public void update()
+    {           
+        
+        
+      
+    }
+
+    public boolean verbindungPruefen(Keks k1, Keks k2)
+   {
+       int x=k2.getX();
+       int y=k2.getY();
+       if(k1.siehtOrt(x,y))
+       {
+           return true;
         }
         else
         {
             return false;
         }
-    }
+   }
 }

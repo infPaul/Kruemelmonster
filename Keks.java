@@ -1,3 +1,5 @@
+
+
 import java.io.FileInputStream; 
 import java.io.FileNotFoundException; 
 import javafx.scene.paint.Color;
@@ -56,6 +58,7 @@ public class Keks
     {
         return kreis;
     }
+    //public boolean 
      public boolean siehtOrt(int x,int y)
     {
         if(reichweite*reichweite<=((x-this.x)*(x-this.x)+(y-this.y)*(y-this.y)))
