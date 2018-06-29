@@ -1,3 +1,5 @@
+
+
 import java.io.FileInputStream; 
 import java.io.FileNotFoundException; 
 import javafx.scene.paint.Color;
@@ -20,22 +22,34 @@ public class Keks
     private int reichweite;
     private Circle kreis;
     private Verbindung verb;
+
     private int maxKruemel;
     private int gespawnteKruemel;
     private int besitzendeKruemel;
     private ArrayList<Kruemel> kruemels;
     private Kruemel temporaerKruemel;
 
-    public Keks(int x,int y,int radius)
+  
+
+    /**
+     * Konstruktor für Objekte der Klasse Keks
+     */
+    public Keks(int x,int y,int radius,Color farbe)
+
     {
         reichweite=200;
         this.x =x;
         this.y =y;
         this.radius=radius;
+
         maxKruemel=radius/2;
         kruemels = new ArrayList<Kruemel>();
         gespawnteKruemel = 0;
         besitzendeKruemel = 0;
+
+
+        durchmesser=radius*2;
+        
 
         // Keks als Bild:
         Image keks = new Image("cookie.png");
@@ -43,7 +57,7 @@ public class Keks
         // Original Kekse hier:
         kreis=new Circle(x,y,radius);
         kreis.setFill(new ImagePattern(keks));
-        kreis.setStroke(Color.RED);
+        kreis.setStroke(farbe); 
         kreis.setStrokeWidth(11);
         kreis.setOnMouseClicked(e -> 
             {
@@ -77,6 +91,7 @@ public class Keks
     {
         return y;
     }
+
 
     public void kruemelZerstoert()
     {
@@ -118,4 +133,7 @@ public class Keks
         kruemels.add(k);
         besitzendeKruemel++;
     }
+
+    
+
 }

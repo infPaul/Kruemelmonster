@@ -1,6 +1,17 @@
+
 import java.util.*;
 import javafx.scene.input.MouseEvent;
+
 import javafx.scene.shape.Circle;
+
+
+import javafx.scene.paint.Color;
+/**
+ * Beschreiben Sie hier die Klasse Spiel.
+ * 
+ * @author (Ihr Name) 
+ * @version (eine Versionsnummer oder ein Datum)
+ */
 
 public class Spiel
 {
@@ -8,7 +19,14 @@ public class Spiel
     private ArrayList<Verbindung> verbindungen;
     private ArrayList<Keks> kekse;
     private Zeichenflaeche flaeche;
+
     private Circle kreis;
+
+
+    private Timer timer;
+    /**
+     * Konstruktor für Objekte der Klasse Spiel
+     */
 
     public Spiel()
     {
@@ -18,6 +36,8 @@ public class Spiel
         verbindungen = new ArrayList<Verbindung>();
         spielErstellen();
         Verbindungen();
+        timer = new Timer(this);  
+
     }
 
     public Zeichenflaeche getFlaeche()
@@ -25,9 +45,9 @@ public class Spiel
         return flaeche;
     }
 
-    public void keksEinfuegen(int x,int y,int radius)
+    public void keksEinfuegen(int x,int y,int radius,Color farbe)
     {
-        Keks keks=new Keks(x,y,radius);
+        Keks keks=new Keks(x,y,radius,farbe);
         kekse.add(keks);
         flaeche.hinzufuegen(keks.getKreis());
     }
@@ -46,44 +66,24 @@ public class Spiel
 
     public void spielErstellen()
     {
-        Random rand=new Random();
-        int maxX=650;
-        int minX=50;
-        int maxY=450;
-        int minY=50;
-        for(int i=0;i<10;i++)
-        {
-            int x=rand.nextInt((maxX-minX)+1)+minX;
-            int y=rand.nextInt((maxY-minY)+1)+minY;
-            keksEinfuegen(x,y,30);
 
-            /*for(int m=0;m<kekse.size();m++)
-            {
-            Keks k = kekse.get(m);
-            int x1=k.getX();
-            int y1=k.getY();
 
-            if (30*30<=((x1-x)*(x1-x)+(y1-y)*(y-y1)))
-            {
-
-            keksEinfuegen(x,y,30);
-
-            }
-            else
-            {
-            //i--;
-            }*/
-        }
+ 
+        keksEinfuegen(40,40,30,Color.RED);
+        keksEinfuegen(80,150,30,Color.GREY);
+        keksEinfuegen(250,120,30,Color.GREY);
+        keksEinfuegen(170,300,30,Color.GREY);
+        keksEinfuegen(350,250,30,Color.GREY);
+        keksEinfuegen(300,380,30,Color.GREY);
+        keksEinfuegen(390,150,30,Color.GREY);
+        keksEinfuegen(470,300,30,Color.GREY);
+        keksEinfuegen(550,170,30,Color.GREY);
+        keksEinfuegen(600,450,30,Color.BLUE);
+        
     }
+        
 
-    public void update()
-    {
-        for(int i=0;i<kekse.size();i++)
-        {
-            Keks k = kekse.get(i);
-            k.spawnKruemel();
-        }
-    }
+    
 
     public void Verbindungen()
     {
@@ -118,4 +118,36 @@ public class Spiel
             k2.empfangeKruemel(k1.sendeKruemel());
         }
     }
+
+    
+    public void start() {    
+        timer.start();
+    }
+
+    public void stop()
+    {
+        timer.stop();
+    }
+
+    // Diese Methode wird vom Timer immer wieder aufgerufen
+    public void update()
+    {           
+        
+        
+      
+    }
+
+    public boolean verbindungPruefen(Keks k1, Keks k2)
+   {
+       int x=k2.getX();
+       int y=k2.getY();
+       if(k1.siehtOrt(x,y))
+       {
+           return true;
+        }
+        else
+        {
+            return false;
+        }
+   }
 }
