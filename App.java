@@ -15,20 +15,31 @@ import javafx.scene.Parent;
 import javafx.scene.input.KeyEvent;
 /**
  * Beschreiben Sie hier die Klasse App.
- * 
- * @author (Ihr Name) 
+ *
+ * @author (Ihr Name)
  * @version (eine Versionsnummer oder ein Datum)
  */
 public class App extends Application
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
+
+    private Spiel spiel;
+
+    /**
+     * Konstruktor fÃ¼r Objekte der Klasse App
+     */
+    public App()
+    {
+        // Instanzvariable initialisieren
+
+
    
 
    
 @Override
     public void start(Stage primaryStage) throws Exception {
         // Darstellung als fxml-Datei
-              //Spieloberfläche einfuegen
+              //SpieloberflÃ¤che einfuegen
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Spieloberflaeche.fxml"));
         Parent root = loader.load();
 
@@ -38,8 +49,9 @@ public class App extends Application
         
        
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Kr�melmonster");
+        primaryStage.setTitle("Krümelmonster");
         primaryStage.show();
+
     }
    /* private void init(Stage primaryStage) {
         Pane root = new Pane();
@@ -47,17 +59,13 @@ public class App extends Application
         primaryStage.setScene(new Scene(root));
         // Simple red filled circle
        spiel = new Spiel();
-       
-        
+
+
         // Create a group to show all the circles);
         root.getChildren().add(spiel.getFlaeche());*/
-    }
  
-   
  
-  /*  @Override public void start(Stage primaryStage) throws Exception {
-        init(primaryStage);
-        primaryStage.show();
-    }
-    public static void main(String[] args) { launch(args); }*/
-
+  
+    
+    public static void main(String[] args) { launch(args); }
+}

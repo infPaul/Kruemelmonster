@@ -8,13 +8,9 @@ import javafx.scene.shape.Circle;
 import javafx.scene.image.*;
 import javafx.scene.paint.ImagePattern;
 import javax.swing.BorderFactory;
+import java.util.*;
+import javafx.scene.input.MouseEvent;
 
-/**
- * Beschreiben Sie hier die Klasse Keks.
- * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
- */
 public class Keks 
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
@@ -26,17 +22,35 @@ public class Keks
     private int reichweite;
     private Circle kreis;
     private Verbindung verb;
+
+    private int maxKruemel;
+    private int gespawnteKruemel;
+    private int besitzendeKruemel;
+    private ArrayList<Kruemel> kruemels;
+    private Kruemel temporaerKruemel;
+
+  
+
     /**
      * Konstruktor für Objekte der Klasse Keks
      */
     public Keks(int x,int y,int radius,Color farbe)
+
     {
         reichweite=200;
         this.x =x;
         this.y =y;
         this.radius=radius;
+
+        maxKruemel=radius/2;
+        kruemels = new ArrayList<Kruemel>();
+        gespawnteKruemel = 0;
+        besitzendeKruemel = 0;
+
+
         durchmesser=radius*2;
         
+
         // Keks als Bild:
         Image keks = new Image("cookie.png");
 
@@ -53,13 +67,12 @@ public class Keks
         );
     }
 
-    
     public Circle getKreis()
     {
         return kreis;
     }
     //public boolean 
-     public boolean siehtOrt(int x,int y)
+    public boolean siehtOrt(int x,int y)
     {
         if(reichweite*reichweite<=((x-this.x)*(x-this.x)+(y-this.y)*(y-this.y)))
         {
@@ -68,14 +81,59 @@ public class Keks
         else
             return true;
     }
+
     public int getX()
     {
         return x;
     }
+
     public int getY()
     {
         return y;
     }
+
+
+    public void kruemelZerstoert()
+    {
+        gespawnteKruemel--;
+    }
+
+    public Kruemel spawnKruemel()
+    {
+        if (maxKruemel > gespawnteKruemel)
+        {
+            Kruemel kruemel=new Kruemel(x,y,this);
+            kruemels.add(kruemel);
+            gespawnteKruemel++;
+            besitzendeKruemel++;
+            return kruemel;
+        }
+        else
+            return null;
+    }
+
+    public Kruemel sendeKruemel()
+    {
+        if (besitzendeKruemel>0)
+        {
+            besitzendeKruemel--;
+            temporaerKruemel = kruemels.get(0);
+            kruemels.remove(0);
+            
+            return temporaerKruemel;
+        }
+        else
+        {
+            return null;
+        }
+    }
     
+    public void empfangeKruemel(Kruemel k)
+    {
+        kruemels.add(k);
+        besitzendeKruemel++;
+    }
+
     
+
 }

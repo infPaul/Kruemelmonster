@@ -1,6 +1,10 @@
 
 import java.util.*;
 import javafx.scene.input.MouseEvent;
+
+import javafx.scene.shape.Circle;
+
+
 import javafx.scene.paint.Color;
 /**
  * Beschreiben Sie hier die Klasse Spiel.
@@ -8,26 +12,32 @@ import javafx.scene.paint.Color;
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
+
 public class Spiel
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private ArrayList<Verbindung> verbindungen;
     private ArrayList<Keks> kekse;
     private Zeichenflaeche flaeche;
+
+    private Circle kreis;
+
+
     private Timer timer;
     /**
      * Konstruktor für Objekte der Klasse Spiel
      */
+
     public Spiel()
     {
         // Instanzvariable initialisieren
-        flaeche=new Zeichenflaeche();
+        flaeche = new Zeichenflaeche();
         kekse = new ArrayList<Keks>();
-        verbindungen=new ArrayList<Verbindung>();
-       timer = new Timer(this);  
+        verbindungen = new ArrayList<Verbindung>();
+        spielErstellen();
+        Verbindungen();
+        timer = new Timer(this);  
 
-        //spielErstellen();
-        //Verbindungen();
     }
 
     public Zeichenflaeche getFlaeche()
@@ -42,6 +52,11 @@ public class Spiel
         flaeche.hinzufuegen(keks.getKreis());
     }
 
+    public void flaecheHinzufuegen(Circle k)
+    {
+        flaeche.hinzufuegen(k);
+    }
+
     public void verbindungEinfuegen(int ax,int ay,int ex,int ey)
     {
         Verbindung v=new Verbindung(ax,ay,ex,ey);
@@ -51,6 +66,8 @@ public class Spiel
 
     public void spielErstellen()
     {
+
+
  
         keksEinfuegen(40,40,30,Color.RED);
         keksEinfuegen(80,150,30,Color.GREY);
@@ -93,6 +110,15 @@ public class Spiel
             }
         }
     }
+
+    public void sendeKruemel(int anzahl, Keks k1, Keks k2) // von k1 nach k2
+    {
+        for(int i=0; i<anzahl; i++)
+        {
+            k2.empfangeKruemel(k1.sendeKruemel());
+        }
+    }
+
     
     public void start() {    
         timer.start();
