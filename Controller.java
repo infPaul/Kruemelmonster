@@ -51,6 +51,7 @@ public class Controller
 
         spiel.spielErstellen();
         spiel.Verbindungen();
+        spiel.kekseZeichnen();
         zustand = "Pause";
 
     }
@@ -59,6 +60,7 @@ public class Controller
 
         spiel.start();
     }
+    
     public void stop()
     {
         spiel.stop();
@@ -82,7 +84,7 @@ public class Controller
         else {
             zustand = "Laufend";
             start();
-            System.out.println("Zustand : LAEUFT");
+            System.out.println("Zustand : LÃUFT");
         }
 
        
