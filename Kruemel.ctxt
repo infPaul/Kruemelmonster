@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Kruemel
+comment1.params=x\ y\ hk
+comment1.target=Kruemel(int,\ int,\ Keks)
+comment2.params=k
+comment2.target=void\ setHeimatkeks(Keks)
+comment3.params=k
+comment3.target=void\ setBesitzkeks(Keks)
+comment4.params=
+comment4.target=javafx.scene.shape.Circle\ getKreis()
+comment5.params=
+comment5.target=int\ getX()
+comment6.params=
+comment6.target=int\ getY()
+comment7.params=xNeu\ yNeu
+comment7.target=void\ bewegenNach(int,\ int)
+numComments=8

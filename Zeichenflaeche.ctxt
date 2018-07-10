@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Zeichenflaeche
+comment0.text=\r\n\ Die\ Klasse\ Zeichenflaeche\r\n
+comment1.params=
+comment1.target=Zeichenflaeche()
+comment2.params=node
+comment2.target=void\ hinzufuegen(javafx.scene.Node)
+comment3.params=node
+comment3.target=void\ loeschen(javafx.scene.Node)
+numComments=4

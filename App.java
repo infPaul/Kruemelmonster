@@ -1,5 +1,4 @@
 
-
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -32,40 +31,32 @@ public class App extends Application
     {
         // Instanzvariable initialisieren
 
+    }
 
-   
-
-   
-@Override
+    @Override
     public void start(Stage primaryStage) throws Exception {
         // Darstellung als fxml-Datei
-              //SpieloberflÃ¤che einfuegen
+        //SpieloberflÃ¤che einfuegen
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Spieloberflaeche.fxml"));
         Parent root = loader.load();
 
-       
         Scene scene = new Scene(root);
 
-        
-       
         primaryStage.setScene(scene);
         primaryStage.setTitle("Krümelmonster");
         primaryStage.show();
 
     }
-   /* private void init(Stage primaryStage) {
-        Pane root = new Pane();
-        primaryStage.setResizable(true);
-        primaryStage.setScene(new Scene(root));
-        // Simple red filled circle
-       spiel = new Spiel();
+    /* private void init(Stage primaryStage) {
+    Pane root = new Pane();
+    primaryStage.setResizable(true);
+    primaryStage.setScene(new Scene(root));
+    // Simple red filled circle
+    spiel = new Spiel();
 
+    // Create a group to show all the circles);
+    root.getChildren().add(spiel.getFlaeche());*/
 
-        // Create a group to show all the circles);
-        root.getChildren().add(spiel.getFlaeche());*/
- 
- 
-  
-    
-    public static void main(String[] args) { launch(args); }
+    // public static void main(String[] args) { launch(args); }
 }
+

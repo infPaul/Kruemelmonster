@@ -82,7 +82,7 @@ public class Controller
         else {
             zustand = "Laufend";
             start();
-            System.out.println("Zustand : LÃUFT");
+            System.out.println("Zustand : LAEUFT");
         }
 
        

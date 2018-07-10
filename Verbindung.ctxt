@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Verbindung
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Verbindung.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=ax\ ay\ ex\ ey
+comment1.target=Verbindung(int,\ int,\ int,\ int)
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Verbindung\r\n
+comment2.params=
+comment2.target=javafx.scene.shape.Line\ getLine()
+numComments=3
