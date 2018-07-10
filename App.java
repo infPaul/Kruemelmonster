@@ -38,7 +38,7 @@ public class App extends Application
         
        
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Kr�melmonster");
+        primaryStage.setTitle("Kruemelmonster");
         primaryStage.show();
     }
    /* private void init(Stage primaryStage) {

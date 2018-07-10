@@ -47,7 +47,7 @@
             <Image url="@Kekszzz-201100285851.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="statistik" layoutX="28.0" layoutY="742.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" text="Statistik">
+      <Button fx:id="statistik" layoutX="28.0" layoutY="742.0" mnemonicParsing="false" onAction="#statistik" prefHeight="37.0" prefWidth="89.0" text="Statistik">
          <font>
             <Font name="Lucida Sans Regular" size="13.0" />
          </font>

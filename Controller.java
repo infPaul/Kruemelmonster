@@ -93,7 +93,7 @@ public class Controller
     @FXML
     void statistik(ActionEvent event)
     {
-        System.out.println("!STATISTIK!");
+            System.out.println("STATISTIK");
     }
 
      
