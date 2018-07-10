@@ -24,7 +24,7 @@ public class App extends Application
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
    
 
-   
+
 @Override
     public void start(Stage primaryStage) throws Exception {
         // Darstellung als fxml-Datei
@@ -38,7 +38,7 @@ public class App extends Application
         
        
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Krümelmonster");
+        primaryStage.setTitle("Krï¿½melmonster");
         primaryStage.show();
     }
    /* private void init(Stage primaryStage) {
